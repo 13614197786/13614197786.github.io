@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>邮箱激活 | Wang shi bo</title><meta name="description" content="实现邮件发送流程利用django.core.mail模块下的send_email函数from django.core.mail import send_email 配置settings.py实现邮件功能QQ邮箱 12345678# email配置# IMAP&#x2F;SMTP服务EMAIL_HOST &#x3D; &quot;smtp.qq.com&quot;EMAIL_PORT &#x3D; 25 # 大多都是25；若使用"><meta name="keywords" content="算法32"><meta name="author" content="Wang shi bo"><meta name="copyright" content="Wang shi bo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2020/09/28/%E9%82%AE%E7%AE%B1%E6%BF%80%E6%B4%BB/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="邮箱激活"><meta property="og:url" content="http://example.com/2020/09/28/%E9%82%AE%E7%AE%B1%E6%BF%80%E6%B4%BB/"><meta property="og:site_name" content="Wang shi bo"><meta property="og:description" content="实现邮件发送流程利用django.core.mail模块下的send_email函数from django.core.mail import send_email 配置settings.py实现邮件功能QQ邮箱 12345678# email配置# IMAP&#x2F;SMTP服务EMAIL_HOST &#x3D; &quot;smtp.qq.com&quot;EMAIL_PORT &#x3D; 25 # 大多都是25；若使用"><meta property="og:image" content="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg"><meta property="article:published_time" content="2020-09-28T03:47:38.577Z"><meta property="article:modified_time" content="2020-09-28T08:45:14.948Z"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime: '',
+  date_suffix: {"one_hour":"刚刚","hours":"小时前","day":"天前"},
+  copyright: {"limitCount":50,"languages":{"author":"作者: Wang shi bo","link":"链接: ","source":"来源: Wang shi bo","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+    },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2020-09-28 16:45:14'
+}</script><noscript><style type="text/css">
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+  }
+}
+
+var autoChangeMode = 'false'
+var t = saveToLocal.get('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (saveToLocal.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s1.ax1x.com/2020/09/27/0AnaVS.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">44</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">2</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><header class="post-bg" id="page-header" style="background-image: url(https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Wang shi bo</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">邮箱激活</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T03:47:38.577Z" title="发表于 2020-09-28 11:47:38">2020-09-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-28T08:45:14.948Z" title="更新于 2020-09-28 16:45:14">2020-09-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python2/">Python2</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><p>实现邮件发送流程<br>利用django.core.mail模块下的send_email函数<br>from django.core.mail import send_email</p>
+<p>配置settings.py实现邮件功能<br>QQ邮箱</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># email配置</span></span><br><span class="line"><span class="comment"># IMAP/SMTP服务</span></span><br><span class="line">EMAIL_HOST = <span class="string">&quot;smtp.qq.com&quot;</span></span><br><span class="line">EMAIL_PORT = <span class="number">25</span> <span class="comment"># 大多都是25；若使用SSL，端口号465或587</span></span><br><span class="line">EMAIL_HOST_USER = <span class="string">&quot;&quot;</span> <span class="comment">#发送邮箱</span></span><br><span class="line">EMAIL_HOST_PASSWORD = <span class="string">&quot;&quot;</span> <span class="comment"># 使用的是QQ的授权码，不是你的密码</span></span><br><span class="line">EMAILE_USE_TLS = <span class="literal">True</span> <span class="comment">#一定要是True，否则发不了</span></span><br><span class="line">EMAIL_FROM = <span class="string">&quot;&quot;</span> <span class="comment">#邮件发送人(邮件中所显示的发送人，和EMAIL_HOST_USER同)</span></span><br></pre></td></tr></table></figure>
+
+<p>如果是 POP3/SMTP服务</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># qq POP3/SMTP 配置</span></span><br><span class="line">EMAIL_BACKEND = <span class="string">&#x27;django.core.mail.backends.smtp.EmailBackend&#x27;</span></span><br><span class="line">EMAIL_HOST = <span class="string">&#x27;smtp.qq.com&#x27;</span></span><br><span class="line">EMAIL_PORT = <span class="number">110</span>  <span class="comment"># 或者 995是设置了 SSL 加密方式</span></span><br><span class="line">EMAIL_HOST_USER = <span class="string">&#x27;&#x27;</span> <span class="comment"># 同上</span></span><br><span class="line">EMAIL_HOST_PASSWORD = <span class="string">&#x27;&#x27;</span>  <span class="comment"># 同上</span></span><br><span class="line">EMAIL_USE_TLS = <span class="literal">True</span>  <span class="comment"># 同上</span></span><br><span class="line">EMAIL_FROM = ‘’ <span class="comment"># 同上</span></span><br></pre></td></tr></table></figure>
+
+<p>新浪邮箱<br>同样是开启服务，获取授权码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">EMAIL_HOST = <span class="string">&quot;smtp.163.com&#x27;&quot;</span> <span class="comment"># 新浪 smtp 服务器地址</span></span><br><span class="line">EMAIL_PORT = <span class="number">25</span> </span><br><span class="line">EMAIL_HOST_USER = <span class="string">&#x27;&quot;&quot;</span></span><br><span class="line"><span class="string">EMAIL_HOST_PASSWORD = &#x27;</span><span class="string">&quot;&quot;</span></span><br><span class="line">EMAIL_FROM = <span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>发送邮件函数send_email使用<br>send_email必填四个参数 Parameter 有 ：subject 标题, message 主体, from_email 发送邮箱, recipient_list 邮件列表。recipient_list 是列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># django自带的邮件发送模块</span></span><br><span class="line"><span class="keyword">from</span> django.core.mail <span class="keyword">import</span> send_mail</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> LMooc.settings <span class="keyword">import</span> EMAIL_FROM</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_register_email</span>(<span class="params">email,send_type=<span class="string">&#x27;register&#x27;</span></span>):</span></span><br><span class="line">    <span class="comment"># 实例化EmailVerifyRecord对象，将邮件内容保存到数据库，便于查询激活链接是否存在</span></span><br><span class="line">    <span class="comment"># email_record = EmailVerifyRecord()</span></span><br><span class="line">    <span class="comment"># email_record.email = email</span></span><br><span class="line">    <span class="comment"># email_record.send_type = send_type</span></span><br><span class="line">    <span class="comment"># email_record.code = random_str(20) #生成长20的随机字符串用以构成激活链接(域名/active/随机code/)</span></span><br><span class="line">    <span class="comment"># 只要编写逻辑判断激活链接中的code是否有，就可以对应user的is_active=true</span></span><br><span class="line">    <span class="comment"># email_record.save()</span></span><br><span class="line"><span class="comment"># 发送邮件功能如下</span></span><br><span class="line"><span class="comment"># email_title = &quot;&quot;邮件标题</span></span><br><span class="line"><span class="comment"># email_body = &quot;&quot;主体</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> send_type == <span class="string">&quot;register&quot;</span>:</span><br><span class="line">    email_title = <span class="string">&quot;你想写的内容&quot;</span></span><br><span class="line">    email_body = <span class="string">&quot;你想写的内容&quot;</span></span><br><span class="line">    <span class="comment"># Parameter：subject标题, message主体, from_email发送邮箱, recipient_list邮件列表,</span></span><br><span class="line">    send_status = send_mail(email_title,email_body,EMAIL_FROM,[email,]) <span class="comment">#返回真值，判断是否发送OK</span></span><br><span class="line">    <span class="keyword">if</span> send_status:</span><br><span class="line">        <span class="comment"># 你想怎样</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">另外发送邮件时遇到了个bug</span><br><span class="line">django.db.utils.IntegrityError: UNIQUE constraint failed: user_userprofile.username</span><br></pre></td></tr></table></figure>
+<p>经过分析应该是在测试注册时，验证码多次输错，但是user对象已经保存过了（username是主键吧），再次输入保存该user时报错</p>
+<p>增加判断存在逻辑</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">user = UserProfile()</span><br><span class="line">...</span><br><span class="line">user_exist = UserProfile.objects.filter(username=request.POST.get(<span class="string">&#x27;email&#x27;</span>,<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> user_exist:</span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">&#x27;register.html&#x27;</span>, &#123;<span class="string">&#x27;msg&#x27;</span>: <span class="string">&quot;用户已存在&quot;</span>&#125;)</span><br><span class="line"> user.save()</span><br></pre></td></tr></table></figure>
+
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Wang shi bo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2020/09/28/%E9%82%AE%E7%AE%B1%E6%BF%80%E6%B4%BB/">http://example.com/2020/09/28/%E9%82%AE%E7%AE%B1%E6%BF%80%E6%B4%BB/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Wang shi bo</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%9532/">算法32</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/09/28/%E5%8F%88%E6%8B%8D%E4%BA%91%E5%AD%98%E5%82%A8%E5%AE%9E%E7%8E%B0%E6%8B%96%E6%8B%BD%E4%B8%8A%E4%BC%A0/"><img class="prev-cover" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">又拍云存储实现拖拽上传</div></div></a></div><div class="next-post pull-right"><a href="/2020/09/28/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%EF%BC%8C%E5%8A%A0%E6%B0%B4%E5%8D%B0%E6%93%8D%E4%BD%9C/"><img class="next-cover" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">图片压缩，加水印操作</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/09/28/构建轮播图/" title="构建轮播图"><img class="cover" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-28</div><div class="title">构建轮播图</div></div></a></div><div><a href="/2020/07/10/creating-a-new-theme/" title="hugo-future-imperfect主题的创建"><img class="cover" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-10</div><div class="title">hugo-future-imperfect主题的创建</div></div></a></div><div><a href="/2020/09/28/FastDFS配置及介绍/" title="FastDFS配置及介绍"><img class="cover" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-28</div><div class="title">FastDFS配置及介绍</div></div></a></div><div><a href="/2020/09/28/flask+vue实现前后端分离/" title="flask+vue实现前后端分离"><img class="cover" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-28</div><div class="title">flask+vue实现前后端分离</div></div></a></div><div><a href="/2020/09/28/git命令/" title="git命令"><img class="cover" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-28</div><div class="title">git命令</div></div></a></div><div><a href="/2020/09/28/git命令自总结/" title="git命令自总结"><img class="cover" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-28</div><div class="title">git命令自总结</div></div></a></div></div></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Wang shi bo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script defer="defer" id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script></div></body></html>

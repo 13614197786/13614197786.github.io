@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wang shi bo</title><meta name="description" content="今日事 今日做"><meta name="author" content="Wang shi bo"><meta name="copyright" content="Wang shi bo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Wang shi bo"><meta property="og:url" content="http://example.com/"><meta property="og:site_name" content="Wang shi bo"><meta property="og:description" content="今日事 今日做"><meta property="og:image" content="https://s1.ax1x.com/2020/09/27/0AnaVS.jpg"><meta property="article:published_time" content="2020-09-28T12:54:55.554Z"><meta property="article:modified_time" content="2020-09-28T12:54:55.554Z"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime: '',
+  date_suffix: {"one_hour":"刚刚","hours":"小时前","day":"天前"},
+  copyright: {"limitCount":50,"languages":{"author":"作者: Wang shi bo","link":"链接: ","source":"来源: Wang shi bo","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+    },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2020-09-28 20:54:55'
+}</script><noscript><style type="text/css">
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+  }
+}
+
+var autoChangeMode = 'false'
+var t = saveToLocal.get('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (saveToLocal.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s1.ax1x.com/2020/09/27/0AnaVS.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">44</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">2</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><header class="full_page" id="page-header" style="background-image: url(https://s1.ax1x.com/2020/09/28/0EHL4J.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Wang shi bo</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Wang shi bo</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/09/28/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E9%A1%B5%E5%99%A8%E5%8F%8A%E5%81%8F%E7%A7%BB/" title="自定义分页器及偏移">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自定义分页器及偏移"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/28/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E9%A1%B5%E5%99%A8%E5%8F%8A%E5%81%8F%E7%A7%BB/" title="自定义分页器及偏移">自定义分页器及偏移</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T03:53:16.186Z" title="发表于 2020-09-28 11:53:16">2020-09-28</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-28T08:38:53.892Z" title="更新于 2020-09-28 16:38:53">2020-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python2/">Python2</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%9532/">算法32</a></span></div><div class="content">
+
+后端见(分页器的使用.md)
+前端(vue.js)demo
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101&lt;template&gt;	&lt;div&gt;                &lt;div v-for&#x3D;&quot;(item,index) in goodslist&quot; :key&#x3D;&quot;index&quot;&gt;            &lt;video width&#x3D;&quot;200&quot; height&#x3D;&quot;150&quot; :src&#x3D;&quot;item.video&quot; controls&#x3D;&quot;controls&qu ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/09/28/%E8%A3%85%E9%A5%B0%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/" title="装饰器的使用">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="装饰器的使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/28/%E8%A3%85%E9%A5%B0%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/" title="装饰器的使用">装饰器的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T03:52:28.136Z" title="发表于 2020-09-28 11:52:28">2020-09-28</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-28T08:38:45.198Z" title="更新于 2020-09-28 16:38:45">2020-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python2/">Python2</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%9532/">算法32</a></span></div><div class="content">
+
+python中的装饰器简单来说就是在不改变原代码的情况下，对其进行附加一些功能(装饰器只会在请求之前做响应操作)
+demo(拿jwt权限验证来做演示)123456789101112131415161718192021# 定义权限检测装饰器def my_decorator(func):    def wrapper(request,*args,**kwargs):        uid = request.GET.get(&#x27;uid&#x27;,None)        myjwt = request.GET.get(&#x27;jwt&#x27;,None)        # 验证用户合法性        try:            decode_jwt = jwt.decode(myjwt,&#x27;mff-project&#x27;,algorithms=[&#x27;HS256&#x27;])            print(decode_jwt[&#x27;data&#x27;][&#x27;uid&#x27;])        except Excepti ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/09/28/%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" title="中间件的使用">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中间件的使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/28/%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" title="中间件的使用">中间件的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T03:51:20.061Z" title="发表于 2020-09-28 11:51:20">2020-09-28</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-28T08:45:29.845Z" title="更新于 2020-09-28 16:45:29">2020-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python2/">Python2</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%9532/">算法32</a></span></div><div class="content">
+
+中间件的作用：类似于一个过滤器，拦截请求或者响应，插入一些公用的业务逻辑流程图
+demo1234567891011121314151617181920212223242526# 导入中间件from django.utils.deprecation import MiddlewareMixin#导包from django.http import HttpResponse,JsonResponse# 定义中间件class MyMiddleware(MiddlewareMixin):    # 请求之前    def process_request(self,request):        # 指定路由拦截        # if request.path_info.startswith(&quot;/login/&quot;):        #     return JsonResponse(&#123;&#x27;messge&#x27;:&#x27;篡改uid&#x27;&#125;,safe=False,json_dumps_params=&#123;&#x27;ensure ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/09/28/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%B2%99%E7%AE%B1%E6%94%AF%E4%BB%98%E6%93%8D%E4%BD%9C/" title="支付宝沙箱支付操作">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="支付宝沙箱支付操作"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/28/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%B2%99%E7%AE%B1%E6%94%AF%E4%BB%98%E6%93%8D%E4%BD%9C/" title="支付宝沙箱支付操作">支付宝沙箱支付操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T03:50:35.867Z" title="发表于 2020-09-28 11:50:35">2020-09-28</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-28T08:45:26.949Z" title="更新于 2020-09-28 16:45:26">2020-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python2/">Python2</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%9532/">算法32</a></span></div><div class="content">
+进入支付宝开放平台
+
+进入沙箱应用，找到RSA2(SHA256)密钥进行配置
+
+下载支付宝开放平台开发助手，进行生成秘钥
+
+这时会生成两个秘钥，一个应用公钥，一个应用私钥
+
+将应用公钥进行复制，到RSA2(SHA256)密钥将应用公钥粘贴进去，这时会自动生成一个支付宝公钥
+
+到这一步我们会得到三个秘钥，分别是：支付宝公钥、应用公钥、应用私钥(在支付宝开放平台开发助手里)
+
+拿着这三个秘钥在Django项目下的支付app根目录创建文件夹keys
+12345678910111213141516# myapp/keys文件夹下# 1.创建支付宝公钥文件(alipay_public_key.pem)-----BEGIN PUBLIC KEY-----# 这里将你的支付宝公钥粘贴进来-----END PUBLIC KEY-----# 2.创建应用公钥文件(app_public_key.pem)-----BEGIN PUBLIC KEY-----# 这里将你的应用公钥粘贴进来-----END PUBLIC KEY-----# 3.创建应用私钥文件-----BEGIN RSA PRIVATE KE ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/09/28/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/" title="原生sql实现多重查询">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="原生sql实现多重查询"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/28/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/" title="原生sql实现多重查询">原生sql实现多重查询</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T03:50:02.751Z" title="发表于 2020-09-28 11:50:02">2020-09-28</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-28T08:45:23.981Z" title="更新于 2020-09-28 16:45:23">2020-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python2/">Python2</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%9532/">算法32</a></span></div><div class="content">在进行模糊查询后会发现满足不了一些必要的条件，他只能查询一个关键字的参数，这时候就得用多重查询来实现多个关键字的查询方法demo前端(vue.js)接收参数时的数据类型及转换
+首先创建好vue文件(search.vue)记得配置好路由
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455&lt;template&gt;  &lt;div&gt;      &lt;!-- 搜索框 --&gt;      &lt;Search @search&#x3D;&quot;search&quot; v-model&#x3D;&quot;text&quot;&gt;&lt;&#x2F;Search&gt;      &lt;table&gt;          &lt;!-- 遍历数据 --&gt;          &lt;tr v-for&#x3D;&quot;(item,index) in goodslist&quot; :key&#x3D;&q ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/09/28/%E5%8F%88%E6%8B%8D%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" title="又拍云上传常用操作">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="又拍云上传常用操作"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/28/%E5%8F%88%E6%8B%8D%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" title="又拍云上传常用操作">又拍云上传常用操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T03:49:33.739Z" title="发表于 2020-09-28 11:49:33">2020-09-28</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-28T08:45:21.383Z" title="更新于 2020-09-28 16:45:21">2020-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python2/">Python2</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%9532/">算法32</a></span></div><div class="content">
+
+1234567891011121314151617181920212223242526272829303132333435import upyun# 新建又拍云实例,第一个参数为空间名称,第二个参数为操作员,三为密码up = upyun.UpYun(&#x27;mff-project-md&#x27;,&#x27;mff&#x27;,&#x27;5byItTmUdh6ol5e4d2WhANvteBzxtroO&#x27;)# 上传文件# up.put(&#x27;/upyun.text&#x27;,&#x27;这里是mff\n的文件上传测试\n&#x27;)# 文件流操作(节省内存)# with open(&#x27;./mff.jpg&#x27;,&#x27;rb&#x27;)as f:#     # 上传#     res = up.put(&#x27;/upyun.jpg&#x27;,f,checksum=True)# 创建目录# up.mkdir(&#x27;/upyun_test/&#x27;)# 移动文件# up.move(&#x27;/upyun.jpg&#x27;, ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/09/28/%E5%8F%88%E6%8B%8D%E4%BA%91%E5%AD%98%E5%82%A8%E5%AE%9E%E7%8E%B0%E6%8B%96%E6%8B%BD%E4%B8%8A%E4%BC%A0/" title="又拍云存储实现拖拽上传">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="又拍云存储实现拖拽上传"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/28/%E5%8F%88%E6%8B%8D%E4%BA%91%E5%AD%98%E5%82%A8%E5%AE%9E%E7%8E%B0%E6%8B%96%E6%8B%BD%E4%B8%8A%E4%BC%A0/" title="又拍云存储实现拖拽上传">又拍云存储实现拖拽上传</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T03:48:04.238Z" title="发表于 2020-09-28 11:48:04">2020-09-28</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-28T08:45:17.155Z" title="更新于 2020-09-28 16:45:17">2020-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python2/">Python2</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%9532/">算法32</a></span></div><div class="content">
+
+先看一下流程图
+​    
+
+
+下载upyun组件
+1pip install upyun
+
+
+
+
+
+进入又拍云官网(https://www.upyun.com/)
+
+完成又拍云注册并实名认证
+
+进入控制台打开云存储
+
+点击创建服务
+
+
+服务名称为唯一
+
+
+(重点)点击新建操作员,名称也是唯一，密码自动生成，并点击复制权限三个全部勾选
+
+
+点击创建
+
+
+
+
+
+
+后端(django)接收图片并上传到又拍云
+123456789101112131415161718192021# 又拍云存储from rest_framework.views import APIViewimport upyunimport uuidclass UpYun(APIView):    # 文件post无大小限制    def post(self,request):        # 获取文件        myfile = request.FILES.get(&#x27;file&#x27;)        # 将接收来的文件名替换为UUID自动生成文件名，降低图片重名操作        myfilename = ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/09/28/%E9%82%AE%E7%AE%B1%E6%BF%80%E6%B4%BB/" title="邮箱激活">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="邮箱激活"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/28/%E9%82%AE%E7%AE%B1%E6%BF%80%E6%B4%BB/" title="邮箱激活">邮箱激活</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T03:47:38.577Z" title="发表于 2020-09-28 11:47:38">2020-09-28</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-28T08:45:14.948Z" title="更新于 2020-09-28 16:45:14">2020-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python2/">Python2</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%9532/">算法32</a></span></div><div class="content">实现邮件发送流程利用django.core.mail模块下的send_email函数from django.core.mail import send_email
+配置settings.py实现邮件功能QQ邮箱
+12345678# email配置# IMAP/SMTP服务EMAIL_HOST = &quot;smtp.qq.com&quot;EMAIL_PORT = 25 # 大多都是25；若使用SSL，端口号465或587EMAIL_HOST_USER = &quot;&quot; #发送邮箱EMAIL_HOST_PASSWORD = &quot;&quot; # 使用的是QQ的授权码，不是你的密码EMAILE_USE_TLS = True #一定要是True，否则发不了EMAIL_FROM = &quot;&quot; #邮件发送人(邮件中所显示的发送人，和EMAIL_HOST_USER同)
+
+如果是 POP3/SMTP服务
+12345678# qq POP3/SMTP 配置EMAIL_BACKEND = &#x27;django.core.mail.backends.smtp.E ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/09/28/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%EF%BC%8C%E5%8A%A0%E6%B0%B4%E5%8D%B0%E6%93%8D%E4%BD%9C/" title="图片压缩，加水印操作">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图片压缩，加水印操作"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/28/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9%EF%BC%8C%E5%8A%A0%E6%B0%B4%E5%8D%B0%E6%93%8D%E4%BD%9C/" title="图片压缩，加水印操作">图片压缩，加水印操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T03:46:51.454Z" title="发表于 2020-09-28 11:46:51">2020-09-28</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-28T08:45:10.285Z" title="更新于 2020-09-28 16:45:10">2020-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python2/">Python2</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%9532/">算法32</a></span></div><div class="content">
+
+
+图片加水印
+12345678910111213141516171819202122from PIL import Image,ImageDraw,ImageFont# 打开一张图片im = Image.open(&quot;./mff.jpg&quot;)# 打开一张图片im = Image.open(&quot;./mff.jpg&quot;)# im.format图片类型  im.size图片的宽高  im.mode颜色模式print(im.format,im.size,im.mode)# 生成画笔draw = ImageDraw.Draw(im)# 设置字体myfont = ImageFont.truetype(&#x27;C:/windows/fonts/Arial.ttf&#x27;, size=80)# 绘制水印  图片位置--水印内容--fill:设置文字透明度--字体大小draw.text((3840-130,2160-100),&#x27;mff&#x27;,fill = (249, 249, 249),font=myfont)# 查看im.show()# 保存 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/09/28/%E8%85%BE%E8%AE%AF%E7%9F%AD%E4%BF%A1%E5%8F%91%E9%80%81%E9%AA%8C%E8%AF%81%E7%A0%81/" title="腾讯短信发送验证码">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="腾讯短信发送验证码"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/28/%E8%85%BE%E8%AE%AF%E7%9F%AD%E4%BF%A1%E5%8F%91%E9%80%81%E9%AA%8C%E8%AF%81%E7%A0%81/" title="腾讯短信发送验证码">腾讯短信发送验证码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-28T03:46:28.161Z" title="发表于 2020-09-28 11:46:28">2020-09-28</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-28T08:45:07.649Z" title="更新于 2020-09-28 16:45:07">2020-09-28</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python2/">Python2</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%9532/">算法32</a></span></div><div class="content">腾讯短信发送验证码12345678910111213141516171819202122232425262728293031323334# 短信应用SDK AppIDappid = 1400****** # SDK AppID是1400开头# 短信应用SDK AppKeyappkey = &quot;xxxxxxxxxxxxxxxxxxxx&quot;# 需要发送短信的手机号phone_numbers = [&quot;133*****453&quot;]# 短信模板ID，需要在短信应用中申请template_id = 000000# 签名sms_sign = &quot;XXXX&quot;from qcloudsms_py import SmsSingleSenderfrom qcloudsms_py.httpclient import HTTPErrorimport ssl# 设置ssl协议证书ssl.create_default_https_context = ssl._create_unverified_contextssender = SmsSingleSender(app ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://s1.ax1x.com/2020/09/27/0AnaVS.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Wang shi bo</div><div class="author-info__description">今日事 今日做</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length_num">44</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length_num">2</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length_num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="sticky_layout"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/09/28/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E9%A1%B5%E5%99%A8%E5%8F%8A%E5%81%8F%E7%A7%BB/" title="自定义分页器及偏移"><img src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自定义分页器及偏移"/></a><div class="content"><a class="title" href="/2020/09/28/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E9%A1%B5%E5%99%A8%E5%8F%8A%E5%81%8F%E7%A7%BB/" title="自定义分页器及偏移">自定义分页器及偏移</a><time datetime="2020-09-28T03:53:16.186Z" title="发表于 2020-09-28 11:53:16">2020-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/28/%E8%A3%85%E9%A5%B0%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/" title="装饰器的使用"><img src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="装饰器的使用"/></a><div class="content"><a class="title" href="/2020/09/28/%E8%A3%85%E9%A5%B0%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/" title="装饰器的使用">装饰器的使用</a><time datetime="2020-09-28T03:52:28.136Z" title="发表于 2020-09-28 11:52:28">2020-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/28/%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" title="中间件的使用"><img src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中间件的使用"/></a><div class="content"><a class="title" href="/2020/09/28/%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" title="中间件的使用">中间件的使用</a><time datetime="2020-09-28T03:51:20.061Z" title="发表于 2020-09-28 11:51:20">2020-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/28/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%B2%99%E7%AE%B1%E6%94%AF%E4%BB%98%E6%93%8D%E4%BD%9C/" title="支付宝沙箱支付操作"><img src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="支付宝沙箱支付操作"/></a><div class="content"><a class="title" href="/2020/09/28/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%B2%99%E7%AE%B1%E6%94%AF%E4%BB%98%E6%93%8D%E4%BD%9C/" title="支付宝沙箱支付操作">支付宝沙箱支付操作</a><time datetime="2020-09-28T03:50:35.867Z" title="发表于 2020-09-28 11:50:35">2020-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/28/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/" title="原生sql实现多重查询"><img src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="原生sql实现多重查询"/></a><div class="content"><a class="title" href="/2020/09/28/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/" title="原生sql实现多重查询">原生sql实现多重查询</a><time datetime="2020-09-28T03:50:02.751Z" title="发表于 2020-09-28 11:50:02">2020-09-28</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Docker/"><span class="card-category-list-name">Docker</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python2/"><span class="card-category-list-name">Python2</span><span class="card-category-list-count">43</span></a></li>
+            
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%89%E8%A3%85/" style="font-size: 1.1em; color: #999">docker介绍及安装</a> <a href="/tags/%E7%AE%97%E6%B3%9532/" style="font-size: 1.5em; color: #99a9bf">算法32</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">41</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">3</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">44</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2020-09-28T12:54:55.288Z"></div></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Wang shi bo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "你不努力一把，怎么知道你不会成功,If you don't work hard, how do you know you won't succeed".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '你不努力一把，怎么知道你不会成功'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') subtitleType()
+  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+} else {
+  subtitleType()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script defer="defer" id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script></div></body></html>
