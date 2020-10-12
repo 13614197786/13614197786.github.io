@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>git命令自总结 | Wang shi bo</title><meta name="description" content="克隆云端项目12345678910111213# 新建文件夹$ mkdir &lt;name&gt;# 查看所有目录$ dir# 进入xx文件夹$ cd &lt;name&gt;# 克隆远程仓库的项目$ git clone &lt;项目网址&gt;# 进入克隆来的项目$ cd &lt;cloneproject&gt;# dir查看一下# 拉取代码 (clone本地知仓库的时候被clone的远端仓库"><meta name="keywords" content="git总结"><meta name="author" content="Wang shi bo"><meta name="copyright" content="Wang shi bo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2020/04/08/git%E5%91%BD%E4%BB%A4%E8%87%AA%E6%80%BB%E7%BB%93/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="git命令自总结"><meta property="og:url" content="http://example.com/2020/04/08/git%E5%91%BD%E4%BB%A4%E8%87%AA%E6%80%BB%E7%BB%93/"><meta property="og:site_name" content="Wang shi bo"><meta property="og:description" content="克隆云端项目12345678910111213# 新建文件夹$ mkdir &lt;name&gt;# 查看所有目录$ dir# 进入xx文件夹$ cd &lt;name&gt;# 克隆远程仓库的项目$ git clone &lt;项目网址&gt;# 进入克隆来的项目$ cd &lt;cloneproject&gt;# dir查看一下# 拉取代码 (clone本地知仓库的时候被clone的远端仓库"><meta property="og:image" content="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg"><meta property="article:published_time" content="2020-04-08T00:00:00.000Z"><meta property="article:modified_time" content="2020-09-30T05:59:14.689Z"><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime: '',
+  date_suffix: {"one_hour":"刚刚","hours":"小时前","day":"天前"},
+  copyright: {"limitCount":50,"languages":{"author":"作者: Wang shi bo","link":"链接: ","source":"来源: Wang shi bo","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+    },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2020-09-30 13:59:14'
+}</script><noscript><style type="text/css">
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+  }
+}
+
+var autoChangeMode = 'false'
+var t = saveToLocal.get('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (saveToLocal.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s1.ax1x.com/2020/09/27/0AnaVS.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">41</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">41</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">10</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E4%BA%91%E7%AB%AF%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">克隆云端项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.</span> <span class="toc-text">上传本地项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%B7%B2%E4%B8%8A%E4%BC%A0%E4%BA%91%E7%AB%AF%E7%9A%84%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.</span> <span class="toc-text">修改已上传云端的项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E6%8A%A5%E9%94%99%EF%BC%9A%E2%80%99fatal-remote-origin-already-exists%E2%80%99%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%EF%BC%9F%E9%99%84%E4%B8%8Agit%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E4%BB%A5%E5%8F%8A%E8%AF%B4%E6%98%8E"><span class="toc-number">4.</span> <span class="toc-text">git报错：’fatal:remote origin already exists’怎么处理？附上git常用操作以及说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E6%9F%A5%E7%9C%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80%E5%91%BD%E4%BB%A4"><span class="toc-number">5.</span> <span class="toc-text">git查看远程仓库地址命令</span></a></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Wang shi bo</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">git命令自总结</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-04-08T00:00:00.000Z" title="发表于 2020-04-08 08:00:00">2020-04-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-30T05:59:14.689Z" title="更新于 2020-09-30 13:59:14">2020-09-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/git/">git</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h2 id="克隆云端项目"><a href="#克隆云端项目" class="headerlink" title="克隆云端项目"></a>克隆云端项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 新建文件夹</span><br><span class="line">$ mkdir &lt;name&gt;</span><br><span class="line"># 查看所有目录</span><br><span class="line">$ dir</span><br><span class="line"># 进入xx文件夹</span><br><span class="line">$ cd &lt;name&gt;</span><br><span class="line"># 克隆远程仓库的项目</span><br><span class="line">$ git clone &lt;项目网址&gt;</span><br><span class="line"># 进入克隆来的项目</span><br><span class="line">$ cd &lt;cloneproject&gt;</span><br><span class="line"># dir查看一下</span><br><span class="line"># 拉取代码 (clone本地知仓库的时候被clone的远端仓库道默认被称为 origin。 所以如果你想向&#x2F;从这个远端仓库push&#x2F;pull 的时候，用内 origin 指代这个远端仓库。)</span><br><span class="line">$ git pull origin master</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="上传本地项目"><a href="#上传本地项目" class="headerlink" title="上传本地项目"></a>上传本地项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 连接到云端</span><br><span class="line">$ git config --global user.name &quot;马菲菲&quot;</span><br><span class="line">$ git config --global user.email &quot;2980738482@qq.com&quot;</span><br><span class="line"># cd (上传文件里)</span><br><span class="line"># 创建git文件</span><br><span class="line">$ git init</span><br><span class="line"># 暂存到云端</span><br><span class="line">$ git add -A</span><br><span class="line"># 把暂存区中的文件提交到本地仓库中并添加描述信息</span><br><span class="line">$ git commit -m &#39;描述信息&#39;</span><br><span class="line"># 映射到云端的仓库</span><br><span class="line">$ git remote add origin &lt;云端仓库链接&gt;</span><br><span class="line"># 上传</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="修改已上传云端的项目"><a href="#修改已上传云端的项目" class="headerlink" title="修改已上传云端的项目"></a>修改已上传云端的项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># cd &lt;已上传并修改的项目&gt;</span><br><span class="line"># 连接到云端</span><br><span class="line">$ git config --global user.name &quot;马菲菲&quot;</span><br><span class="line">$ git config --global user.email &quot;2980738482@qq.com&quot;</span><br><span class="line"># 暂存到云端</span><br><span class="line">$ git add -A</span><br><span class="line"># 把暂存区中的文件提交到本地仓库中并添加描述信息</span><br><span class="line">$ git commit -m &#39;修改后的vue文件&#39;</span><br><span class="line"># 上传已修改项目</span><br><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+
+<h2 id="git报错：’fatal-remote-origin-already-exists’怎么处理？附上git常用操作以及说明"><a href="#git报错：’fatal-remote-origin-already-exists’怎么处理？附上git常用操作以及说明" class="headerlink" title="git报错：’fatal:remote origin already exists’怎么处理？附上git常用操作以及说明"></a>git报错：’fatal:remote origin already exists’怎么处理？附上git常用操作以及说明</h2><p>只要两步：</p>
+<p>1、先删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm origin</span><br></pre></td></tr></table></figure>
+
+<p>2、再次执行添加就可以了。</p>
+<hr>
+<h2 id="git查看远程仓库地址命令"><a href="#git查看远程仓库地址命令" class="headerlink" title="git查看远程仓库地址命令"></a>git查看远程仓库地址命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br></pre></td></tr></table></figure>
+
+<p>git 查看本地和线上分支</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -a</span><br></pre></td></tr></table></figure>
+
+<p>创建本地分支</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b [分支名]</span><br></pre></td></tr></table></figure>
+
+<p>将本地分支推送到线上</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push --<span class="built_in">set</span>-upstream origin mff</span><br></pre></td></tr></table></figure>
+
+<p>切换分支</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout [分支名]</span><br></pre></td></tr></table></figure>
+
+<p>删除本地分支</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d [本地分支名]</span><br></pre></td></tr></table></figure>
+
+<p>删除线上分支</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin --delete [线上分支名]</span><br></pre></td></tr></table></figure>
+
+<p>拉取分支代码</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin [分支名]</span><br></pre></td></tr></table></figure>
+
+<p>合并到主分支(风险操作)</p>
+<ol>
+<li><p>首先确认自己处于主分支(master)</p>
+</li>
+<li><p>输入合并命令</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge [想合并的分支名]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>推送主分支到线上</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Wang shi bo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2020/04/08/git%E5%91%BD%E4%BB%A4%E8%87%AA%E6%80%BB%E7%BB%93/">http://example.com/2020/04/08/git%E5%91%BD%E4%BB%A4%E8%87%AA%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Wang shi bo</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/git%E6%80%BB%E7%BB%93/">git总结</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/04/10/jwt%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE/"><img class="prev-cover" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">jwt访问权限设置</div></div></a></div><div class="next-post pull-right"><a href="/2020/04/04/git%E5%91%BD%E4%BB%A4/"><img class="next-cover" src="https://s1.ax1x.com/2020/09/28/0Eb2qK.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">git命令</div></div></a></div></nav></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Wang shi bo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script defer="defer" id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script></div></body></html>
